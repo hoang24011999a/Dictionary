@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane id="split_pane" dividerPositions="0.3713235294117646" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="216.0">
+         <children>
+            <TextField id="search_field" layoutX="14.0" layoutY="21.0" opacity="0.43" prefHeight="26.0" prefWidth="190.0" promptText="Search something">
+               <effect>
+                  <ColorAdjust />
+               </effect></TextField>
+            <VBox layoutX="9.0" layoutY="58.0" prefHeight="305.0" prefWidth="199.0">
+               <children>
+                  <ListView id="list_searched" prefHeight="206.0" prefWidth="197.0" style="-fx-background-color: #ebeee6; -fx-background-radius: 30;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+            </VBox>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <MenuBar layoutX="1.0" layoutY="14.0" prefHeight="26.0" prefWidth="377.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Add new word">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Add">
+                           <graphic>
+                              <TextField id="text_add_word" />
+                           </graphic></MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Recently" />
+                <Menu mnemonicParsing="false" text="Rate me">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <ListView id="mean_view" fixedCellSize="20.0" layoutX="35.0" layoutY="96.0" prefHeight="288.0" prefWidth="303.0" style="-fx-background-radius: 15; -fx-background-color: #daf542;" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
